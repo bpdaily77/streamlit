@@ -43,3 +43,11 @@ st.line_chart(stock_data)
 st.subheader("Stock Returns")
 st.line_chart(returns_data)
 
+sharpe_ratio = calculate_sharpe_ratio(returns_data)
+sortino_ratio = calculate_sortino_ratio(returns_data)
+
+st.subheader("Performance Metrics")
+st.write(f"Sharpe Ratio: {sharpe_ratio:.2f}")
+st.write(f"Sortino Ratio: {sortino_ratio:.2f}")
+
+
